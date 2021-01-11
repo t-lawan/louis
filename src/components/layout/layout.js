@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { GlobalStyle, TwoColumnSection } from "../../index.styles"
 import SEO from "../seo"
 import Navbar from "../navbar/navbar";
+import State from "../state/state";
 
 const LayoutWrapper = styled.div`
   /* padding: 1rem;
@@ -16,14 +17,12 @@ const MainWrapper = styled.main`
 `
 
 const Section = styled.div`
-  background: yellow;
   padding: 0.5rem;
   overflow-x: hidden;
   overflow-y: scroll;
 `
 
 const SideNavbar = styled.div`
-  background: pink;
   height: 100vh;
   padding: 0.5rem;
 `
@@ -31,6 +30,7 @@ const Layout = props => {
   return (
     <LayoutWrapper>
       <GlobalStyle />
+      <State />
       <SEO title={props.title} />
       <MainWrapper>
         <TwoColumnSection>

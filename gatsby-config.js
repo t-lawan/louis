@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Louis Mason`,
+    description: `Louis Mason`,
+    author: `Akinsola Lawanson`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `louis-mason`,
+        short_name: `louis-mason`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
@@ -33,15 +33,15 @@ module.exports = {
         // Add any options here
       },
     },
-    // {
-    //   resolve: `gatsby-source-contentful`,
-    //   options: {
-    //     spaceId: `your_space_id`,
-    //     // Learn about environment variables: https://gatsby.dev/env-vars
-    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    //     downloadLocal: true,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `4o232seikgsa`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: "TGHZSAlZQ6spZQ3PJV1-6Op96KGjNx1nHENJPbrwhSE",
+        // downloadLocal: true,
+      },
+    },
     {
       resolve: `gatsby-remark-images-contentful`,
       options: {

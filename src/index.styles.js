@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 html,
 body {
-  font-family: sans-serif;
+  font-family: "Arial Narrow", Arial, sans-serif;;
   width: 100vw;
   width: 100%;
   height: 100%;
@@ -105,11 +105,11 @@ export const size = {
 
 export const TwoColumnSection = styled.div`
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr 3fr;
   grid-column-gap: 1rem;
   height: 100vh;
-  @media (max-width: ${size.tablet}) {
+  /* @media (max-width: ${size.tablet}) {
     grid-template-columns: 1fr;
-  }
+  } */
   /* margin-top: 2rem; */
 `
