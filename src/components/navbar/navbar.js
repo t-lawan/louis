@@ -27,8 +27,7 @@ const NavbarSectionTitle = styled.p`
   text-decoration: underline;
 `
 const Navbar = props => {
-  let sidebarLinks = props.sidebar_links
-  console.log("SIDEBAR", sidebarLinks)
+  let sidebarLinks = props.sidebar_links;
   return (
     <NavbarWrapper>
       <NavbarLink to={"/"}>

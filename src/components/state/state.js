@@ -60,7 +60,6 @@ const State = props => {
             }
           }
         }
-
         allContentfulSidebarSection {
           edges {
             node {
