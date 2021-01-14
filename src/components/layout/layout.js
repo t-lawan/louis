@@ -22,10 +22,6 @@ const Section = styled.div`
   overflow-y: scroll;
 `
 
-const SideNavbar = styled.div`
-  height: 100vh;
-  padding: 0.5rem;
-`
 const Layout = props => {
   return (
     <LayoutWrapper>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Louis Mason`,
+    title: `louis mason`,
     description: `Louis Mason is a Polish Australian contemporary artist and writer based in London.`,
     author: `Akinsola Lawanson`,
   },
