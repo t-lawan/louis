@@ -19,7 +19,6 @@ const NavbarLinksWrapper =  styled.div`
 
 const NavbarLink = styled(Link)`
   display: block;
-  padding-bottom: 0.5rem;
 `
 
 const NavbarSectionTitle =  styled.p`

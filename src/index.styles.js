@@ -12,7 +12,7 @@ body {
   height: 100%;
   margin: 0 auto;
   font-style: normal; 
-  background: rgba(242, 242, 242, 0.9); 
+  background: white; 
   }
   h1,h2,h3,h4,h5,h6 {
     margin-left: 0;
@@ -40,12 +40,12 @@ h2 {
 }
 h3 {
   margin-bottom: 1.45rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.1;
 }
 h4 {
   margin-bottom: 1.45rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.1;
 }
 h5 {
@@ -68,7 +68,7 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-p{
+p, a{
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -77,10 +77,14 @@ p{
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  font-size: 0.9rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.1;
   font-weight: lighter;
     font-style: normal;
+}
+
+a {
+  margin: 0;
 }
 li {
   list-style-type: lower-roman;
