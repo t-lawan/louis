@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 const NavbarWrapper = styled.div`
   height: 100vh;
-  padding: 0.5rem;
+  padding: 0.25rem;
 `
 
 const NavbarSectionWrapper = styled.div`

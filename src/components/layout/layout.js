@@ -17,7 +17,7 @@ const MainWrapper = styled.main`
 `
 
 const Section = styled.div`
-  padding: 0.5rem;
+  padding: 0.25rem;
   overflow-x: hidden;
   overflow-y: scroll;
 `
