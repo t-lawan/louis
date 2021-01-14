@@ -9,7 +9,7 @@ export const PageWrapper = styled.div``
 export const PageTitle = styled.p``
 const Image = styled(Img)``
 const ImageWrapper = styled.div`
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 `
 const generateSection = (section, index) => {
   let render
