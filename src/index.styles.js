@@ -1,5 +1,15 @@
 import styled, { createGlobalStyle } from "styled-components"
 
+export const size = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "1500px",
+}
+
 export const GlobalStyle = createGlobalStyle`
     * {
   box-sizing: border-box;
@@ -80,11 +90,17 @@ p, a{
   font-size: 1.1rem;
   line-height: 1.1;
   font-weight: lighter;
-    font-style: normal;
+  font-style: normal;
+  @media (max-width: ${size.mobileL}) {
+    font-size: 0.7rem;
+  }
 }
 
 a {
   margin: 0;
+  @media (max-width: ${size.mobileL}) {
+    margin-bottom: 0.25rem;
+  }
 }
 li {
   list-style-type: lower-roman;
@@ -97,15 +113,6 @@ li {
   }
 `
 
-export const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
-  laptop: "1024px",
-  laptopL: "1440px",
-  desktop: "1500px",
-}
 
 export const TwoColumnSection = styled.div`
   display: grid;
