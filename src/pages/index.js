@@ -9,7 +9,7 @@ const IndexPage = (props) => {
   })
 
   return (
-    <Layout title={homePage ? homePage.title : 'Home'}>
+    <Layout>
       <p> Current/Fortcoming</p>
        {homePage ?  <PageContent isHome={true} pageContent={homePage}/> : null}
     </Layout>
