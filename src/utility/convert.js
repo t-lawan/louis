@@ -62,7 +62,10 @@ export class Convert {
     return new SidebarLinks(
       contentfulModel.contentful_id,
       contentfulModel.title,
-      contentfulModel.pages
+      contentfulModel.order,
+      contentfulModel.pages,
+      contentfulModel.isLink,
+      contentfulModel.linkedPage
     )
   }
   static toModelArray = (query, modelConverter) => {

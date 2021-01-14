@@ -2,42 +2,58 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
 const NavbarWrapper = styled.div`
   height: 100vh;
   padding: 0.5rem;
 `
 
-const NavbarSectionWrapper =  styled.div`
+const NavbarSectionWrapper = styled.div`
   padding: 1rem 0;
 `
 
-const NavbarLinksWrapper =  styled.div`
-
-`
+const NavbarLinksWrapper = styled.div``
 
 const NavbarLink = styled(Link)`
   display: block;
 `
 
-const NavbarSectionTitle =  styled.p`
-text-decoration: underline;
+const NavbarSectionLink = styled(NavbarLink)`
+  text-decoration: underline;
+`
+
+const NavbarSectionTitle = styled.p`
+  text-decoration: underline;
 `
 const Navbar = props => {
-  let sidebarLinks = props.sidebar_links;
-
+  let sidebarLinks = props.sidebar_links
+  console.log("SIDEBAR", sidebarLinks)
   return (
     <NavbarWrapper>
-      <NavbarLink to={'/'}> {props.site_info ?  props.site_info.name : "louis mason "} </NavbarLink>
+      <NavbarLink to={"/"}>
+        {" "}
+        {props.site_info ? props.site_info.name : "louis mason "}{" "}
+      </NavbarLink>
       {sidebarLinks.map((link, index) => (
         <NavbarSectionWrapper key={index}>
-          <NavbarSectionTitle> {link.title}</NavbarSectionTitle>
-          <NavbarLinksWrapper>
-            {link.pages.map((page, i) => (
-              <NavbarLink to={`/${page.slug}`} key={i}> {page.title}</NavbarLink>
-            ))}
-          </NavbarLinksWrapper>
+          {link.isLink ? (
+            <NavbarSectionLink to={`/${link.linkedPage.slug}`}>
+              {link.title}{" "}
+            </NavbarSectionLink>
+          ) : (
+            <NavbarSectionTitle> {link.title}</NavbarSectionTitle>
+          )}
+          {link.pages ? (
+            <NavbarLinksWrapper>
+              {link.pages.map((page, i) => (
+                <NavbarLink to={`/${page.slug}`} key={i}>
+                  {" "}
+                  {page.title}
+                </NavbarLink>
+              ))}
+            </NavbarLinksWrapper>
+          ) : null}
         </NavbarSectionWrapper>
       ))}
     </NavbarWrapper>

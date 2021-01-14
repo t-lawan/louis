@@ -2,7 +2,12 @@ import React from "react"
 import { connect } from "react-redux"
 import { useStaticQuery, graphql } from "gatsby"
 import { Convert } from "../../utility/convert"
-import { isLoaded, setPages, setSidebarLinks, setSiteInfo } from "../../store/actions"
+import {
+  isLoaded,
+  setPages,
+  setSidebarLinks,
+  setSiteInfo
+} from "../../store/actions"
 const State = props => {
   const data = useStaticQuery(
     graphql`
@@ -66,6 +71,13 @@ const State = props => {
                 slug
                 title
               }
+              order
+              isLink
+              linkedPage {
+                contentful_id
+                slug
+                title
+              }
             }
           }
         }
@@ -73,19 +85,28 @@ const State = props => {
     `
   )
   if (!props.isLoaded) {
-    let { allContentfulPage, allContentfulSidebarSection, allContentfulSiteInfo } = data
+    let {
+      allContentfulPage,
+      allContentfulSidebarSection,
+      allContentfulSiteInfo
+    } = data
 
     let pages = Convert.toModelArray(allContentfulPage, Convert.toPageModel)
     let sidebarLinks = Convert.toModelArray(
       allContentfulSidebarSection,
       Convert.toSidebarLinks
-    )   
-    let siteInfo = Convert.toModelArray(allContentfulSiteInfo, Convert.toSiteModel)[0]
+    )
+    let siteInfo = Convert.toModelArray(
+      allContentfulSiteInfo,
+      Convert.toSiteModel
+    )[0]
 
-    sidebarLinks.reverse()
+    sidebarLinks = sidebarLinks.sort((a,b) => {
+      return a.order - b.order;
+    })
 
     props.setPages(pages)
-    props.setSiteInfo(siteInfo);
+    props.setSiteInfo(siteInfo)
     props.setSidebarLinks(sidebarLinks)
     props.loaded()
   }
