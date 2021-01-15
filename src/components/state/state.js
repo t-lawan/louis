@@ -47,6 +47,7 @@ const State = props => {
                 }
               }
               title
+              showTitle
             }
           }
         }
@@ -100,8 +101,8 @@ const State = props => {
       Convert.toSiteModel
     )[0]
 
-    sidebarLinks = sidebarLinks.sort((a,b) => {
-      return a.order - b.order;
+    sidebarLinks = sidebarLinks.sort((a, b) => {
+      return a.order - b.order
     })
 
     props.setPages(pages)

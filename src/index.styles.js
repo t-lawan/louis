@@ -7,7 +7,7 @@ export const size = {
   tablet: "768px",
   laptop: "1024px",
   laptopL: "1440px",
-  desktop: "1500px",
+  desktop: "1500px"
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -50,12 +50,12 @@ h2 {
 }
 h3 {
   margin-bottom: 1.45rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.1;
 }
 h4 {
   margin-bottom: 1.45rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.1;
 }
 h5 {
@@ -87,7 +87,7 @@ p, a{
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.1;
   font-weight: lighter;
   font-style: normal;
@@ -98,6 +98,7 @@ p, a{
 
 a {
   margin: 0;
+  margin-bottom: 0.25rem;
   @media (max-width: ${size.mobileL}) {
     margin-bottom: 0.25rem;
   }
@@ -105,14 +106,12 @@ a {
 li {
   list-style-type: lower-roman;
 }
-
 .active-link {
     font-style: italic;
     transform: rotate(1deg);
 
   }
 `
-
 
 export const TwoColumnSection = styled.div`
   display: grid;

@@ -16,44 +16,45 @@ exports.createPages = ({ graphql, actions }) => {
     return graphql(
       `
         {
-            allContentfulPage {
-                edges {
-                  node {
-                    contentful_id
-                    slug
-                    seoDescription {
-                      seoDescription
+          allContentfulPage {
+            edges {
+              node {
+                contentful_id
+                slug
+                seoDescription {
+                  seoDescription
+                }
+                sections {
+                  contentful_id
+                  title
+                  image {
+                    fluid {
+                      base64
+                      aspectRatio
+                      src
+                      srcSet
+                      sizes
                     }
-                    sections {
-                      contentful_id
-                      title
-                      image {
-                        fluid {
-                          base64
-                          aspectRatio
-                          src
-                          srcSet
-                          sizes
-                        }
-                      }
-                      text {
-                        raw
-                      }
-                      type
-                      images {
-                        fluid {
-                          base64
-                          aspectRatio
-                          src
-                          srcSet
-                          sizes
-                        }
-                      }
+                  }
+                  text {
+                    raw
+                  }
+                  type
+                  images {
+                    fluid {
+                      base64
+                      aspectRatio
+                      src
+                      srcSet
+                      sizes
                     }
-                    title
                   }
                 }
+                title
+                showTitle
               }
+            }
+          }
         }
       `,
       { limit: 1000 }
