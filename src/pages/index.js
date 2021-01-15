@@ -10,7 +10,7 @@ const IndexPage = (props) => {
 
   return (
     <Layout>
-      <p> Current/Fortcoming</p>
+      <p> Current/Forthcoming</p>
        {homePage ?  <PageContent isHome={true} pageContent={homePage}/> : null}
     </Layout>
   )

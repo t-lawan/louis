@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
                   contentful_id
                   title
                   image {
-                    fluid {
+                    fluid(quality: 100) {
                       base64
                       aspectRatio
                       src
@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   type
                   images {
-                    fluid {
+                    fluid(quality: 100) {
                       base64
                       aspectRatio
                       src
