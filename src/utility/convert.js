@@ -11,9 +11,6 @@ export class Convert {
       contentfulModel.sections.forEach(section => {
         sections.push(Convert.toPageSection(section))
       })
-    //   console.log('SECTI BEF', sections);
-    //   sections = sections.reverse();
-    //   console.log('SECTI AFT', sections);
 
     }
 
