@@ -3,6 +3,7 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { Link } from "gatsby"
+import { size } from "../../index.styles";
 
 const NavbarWrapper = styled.div`
   height: 100vh;
@@ -11,6 +12,9 @@ const NavbarWrapper = styled.div`
 
 const NavbarSectionWrapper = styled.div`
   padding: 1rem 0;
+  @media (max-width: ${size.mobileL}) {
+    padding: 0.25rem 0;
+  }
 `
 
 const NavbarLinksWrapper = styled.div``
@@ -21,10 +25,14 @@ const NavbarLink = styled(Link)`
 
 const NavbarSectionLink = styled(NavbarLink)`
   text-decoration: underline;
+  
 `
 
 const NavbarSectionTitle = styled.p`
   text-decoration: underline;
+  @media (max-width: ${size.mobileL}) {
+   margin-bottom: 0.25rem;
+  }
 `
 const Navbar = props => {
   let sidebarLinks = props.sidebar_links;
