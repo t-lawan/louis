@@ -24,12 +24,19 @@ const State = props => {
                 contentful_id
                 title
                 image {
-                  fluid {
+                  fluid(quality: 100, maxWidth: 1200) {
                     base64
                     aspectRatio
                     src
                     srcSet
                     sizes
+                  }
+                  fixed(quality: 100, width: 1000) {
+                    base64
+                    width
+                    height
+                    src
+                    srcSet
                   }
                 }
                 text {
@@ -37,12 +44,19 @@ const State = props => {
                 }
                 type
                 images {
-                  fluid {
+                  fluid(quality: 100, maxWidth: 1200) {
                     base64
                     aspectRatio
                     src
                     srcSet
                     sizes
+                  }
+                  fixed(quality: 100, width: 1000) {
+                    base64
+                    width
+                    height
+                    src
+                    srcSet
                   }
                 }
               }
