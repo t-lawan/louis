@@ -59,7 +59,7 @@ const PageContent = props => {
   let page = props.pageContent;
   return (
     <PageWrapper>
-      <PageTitle>{page.title && page.showTitle ? page.title.toUpperCase() : null}</PageTitle>
+      {page.title && page.showTitle ? <PageTitle>  {page.title.toUpperCase()}</PageTitle> : null}
       {page.sections
         ? page.sections.map((sec, index) => generateSection(sec, index))
         : null}
