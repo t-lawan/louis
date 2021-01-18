@@ -14,6 +14,10 @@ const ImageWrapper = styled.div`
     padding-bottom: 0.25rem;
   }
 `
+
+const TextWrapper = styled.div`
+  width: 90%;
+`
 const generateSection = (section, index) => {
   let render
   switch (section.type) {
@@ -41,12 +45,12 @@ const generateSection = (section, index) => {
       break
     case "text":
       render = (
-        <div key={index}>
+        <TextWrapper key={index}>
           {documentToReactComponents(
             JSON.parse(section.text.raw),
             richTextOptions
           )}
-        </div>
+        </TextWrapper>
       )
       break
     default:

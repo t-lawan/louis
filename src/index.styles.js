@@ -88,7 +88,7 @@ p, a{
   padding-right: 0;
   padding-top: 0;
   font-size: 1.2rem;
-  line-height: 1.1;
+  line-height: 1.15;
   font-weight: lighter;
   font-style: normal;
   @media (max-width: ${size.mobileL}) {
