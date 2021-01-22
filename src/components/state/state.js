@@ -25,7 +25,6 @@ const State = props => {
                 title
                 image {
                   fluid(quality: 100, maxWidth: 2000) {
-                    base64
                     aspectRatio
                     src
                     srcSet
@@ -45,7 +44,6 @@ const State = props => {
                 type
                 images {
                   fluid(quality: 100, maxWidth: 2000) {
-                    base64
                     aspectRatio
                     src
                     srcSet

@@ -18,6 +18,7 @@ const ImageWrapper = styled.div`
 const TextWrapper = styled.div`
   width: 90%;
 `
+
 const generateSection = (section, index) => {
   let render
   switch (section.type) {
@@ -27,22 +28,22 @@ const generateSection = (section, index) => {
               <div key={index}>
                 {section.images.map((img, ind) => (
                      <ImageWrapper key={ind}>
-                        <Image fluid={img.fluid} />
+                        <Image backgroundColor={"white"} fluid={img.fluid} />
                       </ImageWrapper>
                 ))}
               </div>
           )
       }
-      break
+      break;
     case "image":
       if (section.image && section.image.fluid) {
         render = (
           <ImageWrapper key={index}>
-            <Image fluid={section.image.fluid} />
+            <Image backgroundColor={"white"} fluid={section.image.fluid} />
           </ImageWrapper>
         )
       }
-      break
+      break;
     case "text":
       render = (
         <TextWrapper key={index}>
@@ -52,7 +53,7 @@ const generateSection = (section, index) => {
           )}
         </TextWrapper>
       )
-      break
+      break;
     default:
       break
   }

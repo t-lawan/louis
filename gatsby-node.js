@@ -29,14 +29,12 @@ exports.createPages = ({ graphql, actions }) => {
                   title
                   image {
                     fluid(quality: 100, maxWidth: 2000) {
-                      base64
                       aspectRatio
                       src
                       srcSet
                       sizes
                     }
                     fixed(quality: 100, width: 1000) {
-                      base64
                       width
                       height
                       src
@@ -49,7 +47,6 @@ exports.createPages = ({ graphql, actions }) => {
                   type
                   images {
                     fluid(quality: 100, maxWidth: 2000) {
-                      base64
                       aspectRatio
                       src
                       srcSet
